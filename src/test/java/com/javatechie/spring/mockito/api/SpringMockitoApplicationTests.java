@@ -22,7 +22,7 @@ import com.javatechie.spring.mockito.api.model.Employee;
 import com.javatechie.spring.mockito.api.model.Response;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = {SpringMockitoApplication.class, H2JpaConfig.class}, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class SpringMockitoApplicationTests {
 
 	private MockMvc mockMvc;
@@ -47,7 +47,6 @@ public class SpringMockitoApplicationTests {
 		String resultContent = result.getResponse().getContentAsString();
 		Response response = om.readValue(resultContent, Response.class);
 		Assert.assertTrue(response.isStatus() == Boolean.TRUE);
-
 	}
 
 	@Test
