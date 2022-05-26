@@ -1,6 +1,0 @@
-server:
-  port: 8080
-
-ascend:
-  product-config:
-    fees: 500
