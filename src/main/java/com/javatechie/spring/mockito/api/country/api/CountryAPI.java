@@ -27,17 +27,11 @@ public class CountryAPI {
     @GetMapping("/country/{id}")
     public ResponseEntity<Country> getCountryById(@PathVariable Long id){
         Country country = countryService.getCountryById(id);
-        if (country == null){
-            return ResponseEntity.notFound().build();
-        }
-        else{
-            return ResponseEntity.ok(country);
-        }
+        return country == null ? ResponseEntity.notFound().build() :  ResponseEntity.ok(country);
     }
 
     @PostMapping("/country")
     public ResponseEntity<Country> createCountry(@RequestBody CountryVO countryVO){
-        Country country = countryService.createCountry(countryVO);
-        return ResponseEntity.ok(country);
+        return ResponseEntity.ok(countryService.createCountry(countryVO));
     }
 }
