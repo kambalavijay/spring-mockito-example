@@ -1,5 +1,6 @@
-package com.javatechie.spring.mockito.api.country;
+package com.javatechie.spring.mockito.api.country.repository;
 
+import com.javatechie.spring.mockito.api.country.model.Country;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 

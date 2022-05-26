@@ -1,4 +1,4 @@
-package com.javatechie.spring.mockito.api.country;
+package com.javatechie.spring.mockito.api.country.model.VO;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
