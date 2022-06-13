@@ -1,5 +1,5 @@
 # spring-mockito-example
-How to write unit testing for controller using mockito(MockMVC)
+Follow below steps to get to databse engine up and running so that unit tests for controller using mockito(MockMVC) run against that DB.
 
 docker run --name postgres -e POSTGRES_PASSWORD=docker -d postgres
 
